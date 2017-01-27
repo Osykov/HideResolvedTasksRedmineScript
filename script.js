@@ -50,7 +50,7 @@ function isResolvedTask(tableRow) {
 function isUnresolvedTask(tableRow) {
 	try {
 		var e = tableRow.children[3].children[0];
-		return e.options[e.selectedIndex].text != 'Resolved';
+		return e.options[e.selectedIndex].text != 'Resolved' || e.options[e.selectedIndex].text != 'Closed';
 	} catch (err) {
 		return false;
 	}
